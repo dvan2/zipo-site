@@ -1,8 +1,17 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --accent: #f59e0b;
+}
+
+@theme {
+  --color-zomi-red: #b01921; /* Traditional deep red */
+  --color-zomi-green: #2e8b57; /* Rich earthy green */
+  --color-zomi-yellow: #facc15; /* Vibrant gold-like yellow */
+  --color-zomi-black: #1f1f1f; /* Clean dark tone */
+  --color-zomi-white: #ffffff; /* Classic white */
 }
 
 @theme inline {
@@ -12,10 +21,23 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@layer utilities {
+  .bg-accent {
+    background-color: var(--accent);
+  }
+  .text-accent {
+    color: var(--accent);
+  }
+  .border-accent {
+    border-color: var(--accent);
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    /* --background: #0a0a0a; */
     --foreground: #ededed;
+    --accent: #f59e0b;
   }
 }
 
