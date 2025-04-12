@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <div className='bg-background text-foreground font-sans'>
       <section
-        className='relative bg-cover bg-center text-white py-20 text-center'
+        className='relative w-screen bg-cover bg-[50%_55%] text-white py-32 px-4 text-center'
         style={{ backgroundImage: "url('/images/group_star.jpg')" }}
       >
         <div className='absolute inset-0 bg-black/40' />
@@ -11,12 +11,9 @@ export default function Home() {
             Welcome to{' '}
             <span className='text-accent'>Zomi Innkuan Portland Oregon</span>
           </h2>
-          <p className='text-lg text-gray-100 max-w-xl mx-auto'>
+          <p className='text-lg text-gray-100 max-w-xl mx-auto mb-12'>
             Making an impact by preserving our cultural heritage and uniting
             Zomi families in Portland.
-          </p>
-          <p className='text-lg mb-6 font-medium'>
-            Celebrating culture, heritage, and unity
           </p>
           <a
             href='#events'
@@ -80,10 +77,15 @@ export default function Home() {
        </section>  */}
 
       {/* Footer */}
-      <footer id='contact' className='bg-zomi-red text-white py-10 text-center'>
-        <p className='mb-2 font-semibold'>Zomi Innkuan Portland Oregon</p>
-        <p>Email: info@zomiportland.org</p>
-        <p>Facebook: @ZomiInnkuanPortland</p>
+      <footer
+        id='contact'
+        className='bg-zomi-red text-white border-t-30 border-b-30 border-zomi-green-less py-10 text-center'
+      >
+        <div className='max-w-4xl mx-auto'>
+          <p className='mb-2 font-semibold'>Zomi Innkuan Portland Oregon</p>
+          <p>Email: info@zomiportland.org</p>
+          <p>Facebook: @ZomiInnkuanPortland</p>
+        </div>
       </footer>
     </div>
   );
