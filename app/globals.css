@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;700&display=swap');
 @import 'tailwindcss';
 
 :root {
@@ -5,7 +6,7 @@
   --foreground: #1e1e1e;
   --accent: #2563eb; /* Tailwind blue-600 */
 
-  --font-heading: 'Georgia', 'Times New Roman', serif;
+  --font-heading: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
   --font-body: 'Inter', 'Helvetica Neue', sans-serif;
 }
 
@@ -19,14 +20,19 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body);
+
+  line-height: 1.75;
+  font-size: 16px;
 }
 
 @theme {
-  --color-zomi-red: #b01921; /* Traditional deep red */
+  --color-zomi-red: #7b0d11; /* Traditional deep red */
   --color-zomi-green: #2e8b57; /* Rich earthy green */
   --color-zomi-yellow: #facc15; /* Vibrant gold-like yellow */
   --color-zomi-black: #1f1f1f; /* Clean dark tone */
   --color-zomi-white: #ffffff; /* Classic white */
+  --color-zomi-green-less: #0d4618;
+  --color-zomi-red-less: #7b0d11;
 }
 
 @theme inline {

@@ -7,20 +7,20 @@ export default function Home() {
       >
         <div className='absolute inset-0 bg-black/40' />
         <div className='relative z-10'>
-          <h2 className='text-5xl md:text-6xl font-heading font-bold mb-6'>
+          <h2 className='text-5xl md:text-6xl font-bold font-[var(--font-heading)] leading-tight mb-6'>
             Welcome to{' '}
             <span className='text-accent'>Zomi Innkuan Portland Oregon</span>
           </h2>
-          <p className='text-lg text-gray-700 max-w-xl mx-auto'>
+          <p className='text-lg text-gray-100 max-w-xl mx-auto'>
             Making an impact by preserving our cultural heritage and uniting
             Zomi families in Portland.
           </p>
-          <p className='text-lg mb-6'>
+          <p className='text-lg mb-6 font-medium'>
             Celebrating culture, heritage, and unity
           </p>
           <a
             href='#events'
-            className='bg-zomi-yellow text-black px-6 py-2 rounded font-semibold hover:bg-zomi-red hover:text-white transition'
+            className='bg-zomi-red-less text-white px-6 py-2 rounded font-semibold hover:bg-zomi-green-less transition'
           >
             Join the Celebration
           </a>
