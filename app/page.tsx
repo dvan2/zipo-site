@@ -1,3 +1,7 @@
+'use client';
+import ParallaxClientWrapper from '@/components/ParallaxClientWrapper';
+import { Parallax } from 'react-scroll-parallax';
+
 export default function Home() {
   return (
     <div className='bg-background text-foreground font-sans'>
@@ -7,20 +11,26 @@ export default function Home() {
       >
         <div className='absolute inset-0 bg-black/40' />
         <div className='relative z-10'>
-          <h2 className='text-5xl md:text-6xl font-bold font-[var(--font-heading)] leading-tight mb-6'>
-            Welcome to{' '}
-            <span className='text-accent'>Zomi Innkuan Portland Oregon</span>
-          </h2>
-          <p className='text-lg text-gray-100 max-w-xl mx-auto mb-12'>
-            Making an impact by preserving our cultural heritage and uniting
-            Zomi families in Portland.
-          </p>
-          <a
-            href='#events'
-            className='bg-zomi-red-less text-white px-6 py-2 rounded font-semibold hover:bg-zomi-green-less transition'
-          >
-            Join the Celebration
-          </a>
+          <Parallax speed={-10}>
+            <h2 className='text-5xl md:text-6xl font-bold font-[var(--font-heading)] leading-tight mb-6'>
+              Welcome to{' '}
+              <span className='text-accent'>Zomi Innkuan Portland Oregon</span>
+            </h2>
+          </Parallax>
+          <Parallax speed={-10}>
+            <p className='text-lg text-gray-100 max-w-xl mx-auto mb-12'>
+              Making an impact by preserving our cultural heritage and uniting
+              Zomi families in Portland.
+            </p>
+          </Parallax>
+          <Parallax speed={-10}>
+            <a
+              href='#events'
+              className='bg-zomi-red-less text-white px-6 py-2 rounded font-semibold hover:bg-zomi-green-less transition'
+            >
+              Join the Celebration
+            </a>
+          </Parallax>
         </div>
       </section>
       <section id='about' className='max-w-4xl mx-auto py-16 px-6 text-center'>

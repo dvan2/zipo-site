@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
+import ParallaxClientWrapper from '@/components/ParallaxClientWrapper';
 
 export const metadata: Metadata = {
   title: 'Zomi Inkuan Portland Oregon',
@@ -17,8 +17,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className='bg-gray-50 text-gray-800'>
         <Navbar />
-        {children}
-        {/* <main className='max-w-5xl mx-auto p-6'>{children}</main> */}
+        <ParallaxClientWrapper>{children}</ParallaxClientWrapper>
       </body>
     </html>
   );
