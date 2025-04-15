@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className='bg-background text-foreground font-sans'>
       <section
-        className='relative w-screen bg-cover bg-fixed bg-[50%_55%] text-white py-32 px-4 text-center'
+        className='relative w-screen bg-cover bg-fixed bg-[50%_55%] text-white py-64 px-4 text-center'
         style={{ backgroundImage: "url('/images/group_star.jpg')" }}
       >
         <div className='absolute inset-0 bg-black/40' />
