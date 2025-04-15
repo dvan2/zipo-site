@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <div className='bg-background text-foreground font-sans'>
       <section
-        className='relative w-screen bg-cover bg-[50%_55%] text-white py-32 px-4 text-center'
+        className='relative w-screen bg-cover bg-fixed bg-[50%_55%] text-white py-32 px-4 text-center'
         style={{ backgroundImage: "url('/images/group_star.jpg')" }}
       >
         <div className='absolute inset-0 bg-black/40' />
@@ -23,7 +23,6 @@ export default function Home() {
           </a>
         </div>
       </section>
-      {/* 
       <section id='about' className='max-w-4xl mx-auto py-16 px-6 text-center'>
         <h3 className='text-2xl font-bold mb-4'>About Us</h3>
         <p className='text-lg text-gray-600 dark:text-gray-400'>
@@ -32,7 +31,7 @@ export default function Home() {
         </p>
       </section>
 
-       <section id='events' className='bg-gray-100 dark:bg-gray-800 py-16 px-6'>
+      <section id='events' className='bg-gray-100 dark:bg-gray-800 py-16 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
           <h3 className='text-2xl font-bold mb-4'>Upcoming Event</h3>
           <div className='bg-white dark:bg-gray-900 p-6 rounded shadow'>
@@ -55,6 +54,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 
       <section id='gallery' className='max-w-6xl mx-auto py-16 px-6'>
         <h3 className='text-2xl font-bold text-center mb-8'>Gallery</h3>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6'>
