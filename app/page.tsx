@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className='bg-background text-foreground font-sans'>
       <section
-        className='relative w-screen bg-cover bg-fixed bg-[50%_55%] text-white py-64 px-4 text-center'
+        className='relative w-full bg-cover bg-fixed bg-[50%_55%] text-white py-64 px-4 text-center'
         style={{ backgroundImage: "url('/images/group_star.jpg')" }}
       >
         <div className='absolute inset-0 bg-black/40' />
@@ -84,18 +84,6 @@ export default function Home() {
           />
         </div>
        </section>  */}
-
-      {/* Footer */}
-      <footer
-        id='contact'
-        className='bg-zomi-red text-white border-t-30 border-b-30 border-zomi-green-less py-10 text-center'
-      >
-        <div className='max-w-4xl mx-auto'>
-          <p className='mb-2 font-semibold'>Zomi Innkuan Portland Oregon</p>
-          <p>Email: info@zomiportland.org</p>
-          <p>Facebook: @ZomiInnkuanPortland</p>
-        </div>
-      </footer>
     </div>
   );
 }

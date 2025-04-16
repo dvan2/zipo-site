@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import ParallaxClientWrapper from '@/components/ParallaxClientWrapper';
+import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Zomi Inkuan Portland Oregon',
@@ -15,9 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className='bg-gray-50 text-gray-800'>
+      <body className='min-h-screen flex flex-col bg-gray-50 text-gray-800'>
         <Navbar />
-        <ParallaxClientWrapper>{children}</ParallaxClientWrapper>
+        <main className='flex-grow'>
+          <ParallaxClientWrapper>{children}</ParallaxClientWrapper>
+        </main>
+        <Footer />
       </body>
     </html>
   );
