@@ -1,5 +1,4 @@
 'use client';
-import ParallaxClientWrapper from '@/components/ParallaxClientWrapper';
 import { Parallax } from 'react-scroll-parallax';
 
 export default function Home() {
