@@ -38,7 +38,6 @@ export default function Home() {
           <h3 className='text-3xl font-bold text-gray-900 font-heading mb-10'>
             Upcoming Event
           </h3>
-
           <div className='bg-[#dfeee1] border border-gray-200 rounded-2xl shadow-md p-8 text-center'>
             <h4 className='text-2xl font-semibold text-zomi-red mb-2'>
               Zomi Nam Ni - KUM 76 CIN
@@ -49,7 +48,8 @@ export default function Home() {
             </p>
 
             <p className='text-gray-700 mb-4'>
-              <strong>Location:</strong> 3300 Bryant Irvin Rd, Fort Worth, TX
+              <strong>Location:</strong> 12003 NE Shaver St, Portland, OR 97220{' '}
+              <br /> Parkrose High School
             </p>
 
             <a
