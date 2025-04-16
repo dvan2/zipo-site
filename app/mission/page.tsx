@@ -4,7 +4,7 @@ export default function Mission() {
   return (
     <div className='max-w-5xl mx-auto px-4 py-12'>
       <PageHeader title='Our Mission' />
-      <p className='text-lg text-gray-700 leading-relaxed'>
+      <p className='body-lg'>
         The mission of Zomi Innkuan is to preserve our cultural identity, uplift
         our community, and foster unity through social engagement, support
         programs, and cultural events. We strive to be a beacon for Zomi

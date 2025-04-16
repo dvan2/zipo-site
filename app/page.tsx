@@ -11,7 +11,7 @@ export default function Home() {
         <div className='absolute inset-0 bg-black/40' />
         <div className='relative z-10'>
           <Parallax speed={-10}>
-            <h2 className='text-5xl md:text-6xl font-bold font-[var(--font-heading)] leading-tight mb-16'>
+            <h2 className='text-5xl md:text-6xl font-bold font-heading leading-tight mb-16 fade-in'>
               Welcome to{' '}
               <span className='text-accent'>Zomi Innkuan Portland Oregon</span>
             </h2>
@@ -35,7 +35,7 @@ export default function Home() {
 
       <section id='events' className='bg-[#fefae0] py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
-          <h3 className='text-3xl font-bold text-gray-900 font-[var(--font-heading)] mb-10'>
+          <h3 className='text-3xl font-bold text-gray-900 font-heading mb-10'>
             Upcoming Event
           </h3>
 
