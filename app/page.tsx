@@ -32,30 +32,29 @@ export default function Home() {
           </Parallax>
         </div>
       </section>
-      <section id='about' className='max-w-4xl mx-auto py-16 px-6 text-center'>
-        <h3 className='text-2xl font-bold mb-4'>About Us</h3>
-        <p className='text-lg text-gray-700'>
-          Zomi Innkuan Portland is a vibrant community fostering unity among
-          Zomi families through cultural celebrations, support, and leadership.
-        </p>
-      </section>
 
-      <section id='events' className='bg-gray-800 py-16 px-6'>
+      <section id='events' className='bg-[#fefae0] py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
-          <h3 className='text-2xl font-bold mb-4'>Upcoming Event</h3>
-          <div className='bg-white dark:bg-gray-900 p-6 rounded shadow'>
-            <h4 className='text-xl font-semibold text-zomi-red'>
+          <h3 className='text-3xl font-bold text-gray-900 font-[var(--font-heading)] mb-10'>
+            Upcoming Event
+          </h3>
+
+          <div className='bg-[#dfeee1] border border-gray-200 rounded-2xl shadow-md p-8 text-center'>
+            <h4 className='text-2xl font-semibold text-zomi-red mb-2'>
               Zomi Nam Ni - KUM 76 CIN
             </h4>
-            <p className='text-gray-600 dark:text-gray-300 mb-2'>
-              Feb 17, 2024 | 1:00 PM - 5:00 PM
+
+            <p className='text-gray-700 mb-1'>
+              <strong>Date:</strong> Feb 17, 2024 | 1:00 PM - 5:00 PM
             </p>
-            <p className='text-gray-700 dark:text-gray-200 mb-4'>
-              3300 Bryant Irvin Rd, Fort Worth, TX
+
+            <p className='text-gray-700 mb-4'>
+              <strong>Location:</strong> 3300 Bryant Irvin Rd, Fort Worth, TX
             </p>
+
             <a
               href='#'
-              className='text-zomi-green font-semibold hover:underline'
+              className='inline-block mt-4 text-zomi-green font-semibold hover:underline'
             >
               See All Events
             </a>

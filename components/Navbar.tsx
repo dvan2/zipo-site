@@ -7,7 +7,8 @@ import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 
 const navItems = [
-  { label: 'About Us', href: '/' },
+  { label: 'Home', href: '/' },
+  { label: 'About Us', href: '/about' },
   { label: 'Mission', href: '/mission' },
   { label: 'Activities', href: '/activities' },
   { label: 'History', href: '/history' },
