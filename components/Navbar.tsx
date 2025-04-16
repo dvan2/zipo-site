@@ -2,10 +2,21 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react'; // icons
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+import { Menu, X } from 'lucide-react';
+
+const navItems = [
+  { label: 'About Us', href: '/' },
+  { label: 'Mission', href: '/mission' },
+  { label: 'Activities', href: '/activities' },
+  { label: 'History', href: '/history' },
+  { label: 'Contact Us', href: '/contact' },
+];
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className='bg-background'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -14,30 +25,52 @@ export default function Navbar() {
             <Image
               src='/images/ziporound.png'
               alt='ZIPO logo'
-              width={100}
-              height={100}
+              width={48}
+              height={48}
             />
           </Link>
 
           <div className='hidden md:flex space-x-8 text-base font-light text-gray-700'>
-            <Link href='/' className='nav-link'>
-              About Us
-            </Link>
-            <Link href='/mission' className='nav-link'>
-              Mission
-            </Link>
-            <Link href='/activities' className='nav-link'>
-              Activities
-            </Link>
-            <Link href='#about' className='nav-link'>
-              History
-            </Link>
-            <Link href='#contact' className='nav-link'>
-              Contact Us
-            </Link>
+            {navItems.map(({ label, href }) => (
+              <Link
+                key={href}
+                href={href}
+                className={`nav-link relative ${
+                  pathname === href
+                    ? 'text-blue-600 font-semibold after:w-full'
+                    : 'text-gray-700'
+                }`}
+              >
+                {label}
+              </Link>
+            ))}
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className='md:hidden'>
+            <button onClick={() => setIsOpen(!isOpen)} aria-label='Toggle Menu'>
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
       </div>
+
+      {isOpen && (
+        <div className='md:hidden px-4 pb-4 space-y-2'>
+          {navItems.map(({ label, href }) => (
+            <Link
+              key={href}
+              href={href}
+              onClick={() => setIsOpen(false)}
+              className={`block nav-link ${
+                pathname === href ? 'text-blue-600 font-semibold' : ''
+              }`}
+            >
+              {label}
+            </Link>
+          ))}
+        </div>
+      )}
     </nav>
   );
 }

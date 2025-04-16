@@ -11,13 +11,13 @@ export default function Home() {
         <div className='absolute inset-0 bg-black/40' />
         <div className='relative z-10'>
           <Parallax speed={-10}>
-            <h2 className='text-5xl md:text-6xl font-bold font-[var(--font-heading)] leading-tight mb-6'>
+            <h2 className='text-5xl md:text-6xl font-bold font-[var(--font-heading)] leading-tight mb-16'>
               Welcome to{' '}
               <span className='text-accent'>Zomi Innkuan Portland Oregon</span>
             </h2>
           </Parallax>
           <Parallax speed={-10}>
-            <p className='text-lg text-gray-100 max-w-xl mx-auto mb-12'>
+            <p className='text-lg text-gray-100 max-w-xl mx-auto mb-16'>
               Making an impact by preserving our cultural heritage and uniting
               Zomi families in Portland.
             </p>
@@ -34,13 +34,13 @@ export default function Home() {
       </section>
       <section id='about' className='max-w-4xl mx-auto py-16 px-6 text-center'>
         <h3 className='text-2xl font-bold mb-4'>About Us</h3>
-        <p className='text-lg text-gray-600 dark:text-gray-400'>
+        <p className='text-lg text-gray-700'>
           Zomi Innkuan Portland is a vibrant community fostering unity among
           Zomi families through cultural celebrations, support, and leadership.
         </p>
       </section>
 
-      <section id='events' className='bg-gray-100 dark:bg-gray-800 py-16 px-6'>
+      <section id='events' className='bg-gray-800 py-16 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
           <h3 className='text-2xl font-bold mb-4'>Upcoming Event</h3>
           <div className='bg-white dark:bg-gray-900 p-6 rounded shadow'>
