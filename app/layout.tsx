@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang='en' className='overflow-y-scroll'>
       <body className='min-h-screen flex flex-col bg-gray-50 text-gray-800'>
         <Navbar />
         <main className='flex-grow'>
