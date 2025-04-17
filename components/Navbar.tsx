@@ -9,7 +9,6 @@ import { Menu, X } from 'lucide-react';
 const navItems = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
-  { label: 'Mission', href: '/mission' },
   { label: 'Activities', href: '/activities' },
   { label: 'History', href: '/history' },
   { label: 'Contact Us', href: '/contact' },
