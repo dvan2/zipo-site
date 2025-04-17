@@ -5,11 +5,11 @@ export default function Mission() {
     <div className='max-w-5xl mx-auto px-4 py-12'>
       <PageHeader title='Our Mission' />
       <p className='body-lg'>
-        The mission of Zomi Innkuan is to preserve our cultural identity, uplift
-        our community, and foster unity through social engagement, support
-        programs, and cultural events. We strive to be a beacon for Zomi
-        individuals and families living in Portland by celebrating our heritage
-        and empowering the next generation.
+        Our mission is to preserve and celebrate Zomi culture by engaging and
+        empowering the younger generation. We strive to ensure that our
+        language, traditions, and values are passed down with respect and
+        admiration— fostering identity, connection, and unity for both today’s
+        youth and generations to come.
       </p>
     </div>
 
