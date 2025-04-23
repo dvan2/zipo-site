@@ -25,6 +25,29 @@
   }
 }
 
+@layer utilities {
+  .fade-slide-hidden {
+    @apply opacity-0 blur-sm -translate-x-full transition-all duration-700 ease-out;
+  }
+
+  .fade-slide-show {
+    @apply opacity-100 blur-none translate-x-0;
+  }
+
+  .delay-200 {
+    transition-delay: 200ms;
+  }
+  .delay-400 {
+    transition-delay: 400ms;
+  }
+  .delay-600 {
+    transition-delay: 600ms;
+  }
+  .delay-800 {
+    transition-delay: 800ms;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
