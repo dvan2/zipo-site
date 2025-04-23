@@ -9,19 +9,40 @@ const leaders = [
     image: '/images/leaders/president.png',
   },
   {
-    name: 'Mary Za Hnem',
+    name: 'Pu Thang Suan Khup',
     role: 'Vice President',
-    image: '/images/leaders/president.png',
+    image: '/images/leaders/pa_khup.png',
   },
+
   {
-    name: 'Tuan Sung',
-    role: 'Youth Leader',
-    image: '/images/leaders/president.png',
-  },
-  {
-    name: 'Lian Hmung',
+    name: 'Pu Cin Ngaih Suan',
     role: 'Secretary',
-    image: '/images/leaders/president.png',
+    image: '/images/leaders/cin_suan.png',
+  },
+  {
+    name: 'Pu Langh Khan Khual',
+    role: 'Treasurer',
+    image: '/images/leaders/pulangh_khual.png',
+  },
+  {
+    name: 'Pi Zam Don Kim',
+    role: 'Assistant Treasurer',
+    image: '/images/leaders/pi_zam_kim.png',
+  },
+  {
+    name: 'Tg. Lal Hoih Cin',
+    role: 'Youth Leader',
+    image: '/images/leaders/tg_lal_hoih.png',
+  },
+  {
+    name: 'Tg.Mang Sian Suan Suum',
+    role: 'Youth Secretary',
+    image: '/images/leaders/tg_mang_suum.png',
+  },
+  {
+    name: 'Lia Ciin Lawh Kim',
+    role: 'Youth Tresurer',
+    image: '/images/leaders/lia_ciin_kim.png',
   },
 ];
 
@@ -69,7 +90,7 @@ export default function LeadershipPage() {
             Our Organizational Structure
           </h2>
 
-          <div className='grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+          <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
             {leaders.map((leader, index) => (
               <LeaderCard key={leader.name} {...leader} index={index} />
             ))}

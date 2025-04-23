@@ -12,7 +12,7 @@ export function useStaggerAnimation(delay: number) {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0, rootMargin: '0px 0px -20% 0px' }
     );
 
     if (ref.current) observer.observe(ref.current);

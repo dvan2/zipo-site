@@ -17,13 +17,15 @@ export default function LeaderCard({ name, role, image, index }: LeaderProps) {
       style={{ transitionDelay: `${(index + 1) * 200}ms` }}
       className={`fade-slide-hidden ${isVisible && 'fade-slide-show'}`}
     >
-      <div className='p-6 rounded-xl shadow-md hover:shadow-xl hover:scale-103 transition-transform duration-300 ease-in-out text-center'>
+      <div className='w-full h-[250px] mx-auto max-w-xs p-6 rounded-xl shadow-md hover:shadow-xl hover:scale-103 transition-transform duration-300 ease-in-out text-center'>
         <img
           src={image}
           alt={name}
           className='w-24 h-24 object-cover rounded-full mx-auto mb-4 border-4 border-zomi-green-less'
         />
-        <h4 className='font-semibold text-gray-800'>{name}</h4>
+        <h4 className='font-semibold text-gray-800 break-words text-center max-w-[200px] mx-auto'>
+          {name}
+        </h4>
         <p className='text-sm text-gray-600'>{role}</p>
       </div>
     </div>
