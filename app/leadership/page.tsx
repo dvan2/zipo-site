@@ -7,52 +7,48 @@ export default function LeadershipPage() {
       <PageHeader title='Leadership & Vision' />
 
       {/* President’s Message */}
-      <section className='mb-16'>
-        <h2 className='text-xl font-heading font-semibold text-zomi-red mb-4'>
-          Message from Our President
-        </h2>
-        <p className='italic text-gray-700 mb-6'>
-          "Together, we celebrate our heritage, embrace unity, and build a
-          legacy for generations to come. Our mission is not just about
-          preserving culture — it's about empowering our people to thrive and
-          lead with dignity in every step of their journey."
-        </p>
-        <p className='text-base text-gray-800 font-semibold mb-2'>
-          — En Khan Khai, President
-        </p>
-      </section>
-
-      {/* Organizational Structure */}
-      <section>
-        <h2 className='text-xl font-heading font-semibold text-zomi-red mb-4'>
-          Our Organizational Structure
+      <section className='mt-16'>
+        <h2 className='text-2xl font-heading font-semibold text-zomi-red mb-8 text-center'>
+          Our Leadership Team
         </h2>
 
-        {/* Option A: Org Chart Image */}
-        <img
-          src='/images/board_members.jpg'
-          alt='ZIPO Organizational Chart'
-          className='rounded-xl shadow-md mx-auto max-w-3xl w-full object-cover mb-6'
-        />
-
-        {/* Option B: Leadership List (optional to add under image) */}
-        <ul className='text-base text-gray-800 space-y-2 max-w-2xl mx-auto'>
-          <li>
-            <strong>President:</strong> En Khan Khai
-          </li>
-          <li>
-            <strong>Vice President:</strong> [Name]
-          </li>
-          <li>
-            <strong>General Secretary:</strong> [Name]
-          </li>
-          <li>
-            <strong>Youth Leader:</strong> [Name]
-          </li>
-          <li>
-            <strong>Finance Chair:</strong> [Name]
-          </li>
-        </ul>
+        <div className='grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+          {[
+            {
+              name: 'En Khan Khai',
+              role: 'President',
+              image: '/images/leaders/president.png',
+            },
+            {
+              name: 'Mary Za Hnem',
+              role: 'Vice President',
+              image: '/images/leaders/president.png',
+            },
+            {
+              name: 'Tuan Sung',
+              role: 'Youth Leader',
+              image: '/images/leaders/president.png',
+            },
+            {
+              name: 'Lian Hmung',
+              role: 'Secretary',
+              image: '/images/leaders/president.png',
+            },
+          ].map((leader) => (
+            <div
+              key={leader.name}
+              className='text-center p-6 rounded-xl shadow hover:shadow-lg transition'
+            >
+              <img
+                src={leader.image}
+                alt={leader.name}
+                className='w-28 h-28 object-cover rounded-full mx-auto mb-4 border-2 border-zomi-green-less'
+              />
+              <h4 className='font-semibold text-gray-800'>{leader.name}</h4>
+              <p className='text-sm text-gray-600'>{leader.role}</p>
+            </div>
+          ))}
+        </div>
       </section>
     </Wrapper>
   );
