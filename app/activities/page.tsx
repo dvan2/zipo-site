@@ -4,8 +4,8 @@ import Wrapper from '@/components/Wrapper';
 export default function ActivitiesPage() {
   return (
     <>
-      <PageHeader title='Activities' />
       <Wrapper>
+        <PageHeader title='Activities' />
         {/* Community Sports Section */}
         <section className='mb-16'>
           <h2 className='text-2xl font-heading text-zomi-green-less mb-4'>

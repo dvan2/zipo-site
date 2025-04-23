@@ -12,15 +12,5 @@ export default function Mission() {
         youth and generations to come.
       </p>
     </div>
-
-    // <div className='grid md:grid-cols-3 gap-6 mt-10'>
-    //   <div className='p-6 bg-white rounded-xl shadow text-center'>
-    //     <h3 className='text-xl font-bold mb-2'>Cultural Preservation</h3>
-    //     <p className='text-gray-600'>
-    //       We organize events to celebrate and pass on our traditions.
-    //     </p>
-    //   </div>
-    //   ...
-    // </div>
   );
 }

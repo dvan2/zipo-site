@@ -14,16 +14,18 @@ export default function LeaderCard({ name, role, image, index }: LeaderProps) {
   return (
     <div
       ref={ref}
-      className={` p-6 rounded-xl shadow-md text-center transform transition-all duration-700 ease-out
-        ${isVisible ? `fade-slide-show ${delayClass}` : 'fade-slide-hidden'}`}
+      style={{ transitionDelay: `${(index + 1) * 200}ms` }}
+      className={`fade-slide-hidden ${isVisible && 'fade-slide-show'}`}
     >
-      <img
-        src={image}
-        alt={name}
-        className='w-24 h-24 object-cover rounded-full mx-auto mb-4 border-4 border-zomi-green-less'
-      />
-      <h4 className='font-semibold text-gray-800'>{name}</h4>
-      <p className='text-sm text-gray-600'>{role}</p>
+      <div className='p-6 rounded-xl shadow-md hover:shadow-xl hover:scale-103 transition-transform duration-300 ease-in-out text-center'>
+        <img
+          src={image}
+          alt={name}
+          className='w-24 h-24 object-cover rounded-full mx-auto mb-4 border-4 border-zomi-green-less'
+        />
+        <h4 className='font-semibold text-gray-800'>{name}</h4>
+        <p className='text-sm text-gray-600'>{role}</p>
+      </div>
     </div>
   );
 }

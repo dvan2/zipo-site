@@ -63,7 +63,7 @@ export default function Home() {
       </section>
 
       {/* Gallery section */}
-      <section id='gallery' className='bg-py-16 px-6'>
+      <section id='gallery' className='bg-py-16 px-6 mb-16'>
         <h3 className='text-2xl font-heading font-semibold text-center mb-8'>
           From Our Celebrations
         </h3>
