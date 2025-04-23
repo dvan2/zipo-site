@@ -9,8 +9,8 @@ import { Menu, X } from 'lucide-react';
 const navItems = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
+  { label: 'Leadership', href: '/leadership' },
   { label: 'Activities', href: '/activities' },
-  { label: 'History', href: '/history' },
   { label: 'Contact Us', href: '/contact' },
 ];
 
@@ -37,7 +37,7 @@ export default function Navbar() {
                 href={href}
                 className={`nav-link relative ${
                   pathname === href
-                    ? 'text-blue-600 font-semibold after:w-full'
+                    ? 'text-zomi-green-less font-semibold'
                     : 'text-gray-700'
                 }`}
               >
@@ -63,7 +63,7 @@ export default function Navbar() {
               href={href}
               onClick={() => setIsOpen(false)}
               className={`block nav-link ${
-                pathname === href ? 'text-blue-600 font-semibold' : ''
+                pathname === href ? 'text-zomi-green-less font-semibold' : ''
               }`}
             >
               {label}
