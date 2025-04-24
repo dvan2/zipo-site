@@ -4,7 +4,6 @@
 :root {
   --background: #fefae0; /* light cream */
   --foreground: #1e1e1e;
-  --accent: #2563eb; /* Tailwind blue-600 */
 
   --font-heading: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
   --font-body: 'Inter', 'Helvetica Neue', sans-serif;
@@ -12,7 +11,7 @@
 
 @layer components {
   .nav-link {
-    @apply text-base font-normal text-gray-700 hover:text-blue-600 transition;
+    @apply text-base font-normal text-gray-700 hover:text-zomi-green-less transition;
   }
 
   .font-heading {
@@ -23,6 +22,29 @@
     @apply text-lg leading-relaxed;
     letter-spacing: 0.02em;
     line-height: 1.75;
+  }
+}
+
+@layer utilities {
+  .fade-slide-hidden {
+    @apply opacity-0 blur-sm -translate-x-full transition-all duration-700 ease-out;
+  }
+
+  .fade-slide-show {
+    @apply opacity-100 blur-none translate-x-0;
+  }
+
+  .delay-200 {
+    transition-delay: 200ms;
+  }
+  .delay-400 {
+    transition-delay: 400ms;
+  }
+  .delay-600 {
+    transition-delay: 600ms;
+  }
+  .delay-800 {
+    transition-delay: 800ms;
   }
 }
 
@@ -63,9 +85,10 @@ body {
   height: 2px;
   bottom: 0;
   left: 0;
-  background: currentColor;
+  background: var(--color-zomi-green-less);
   transition: width 0.3s ease;
 }
+
 .nav-link:hover::after {
   width: 100%;
 }

@@ -62,27 +62,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 
-      <section id='gallery' className='max-w-6xl mx-auto py-16 px-6'>
-        <h3 className='text-2xl font-bold text-center mb-8'>Gallery</h3>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6'>
+      {/* Gallery section */}
+      <section id='gallery' className='bg-py-16 px-6 mb-16'>
+        <h3 className='text-2xl font-heading font-semibold text-center mb-8'>
+          From Our Celebrations
+        </h3>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto'>
           <img
-            src='/images/photo1.jpg'
-            alt='Event 1'
+            src='/images/group_star.jpg'
+            alt='Zomi event 1'
             className='rounded shadow'
           />
           <img
-            src='/images/photo2.jpg'
-            alt='Event 2'
+            src='/images/khuado_lam.jpg'
+            alt='Zomi event 2'
             className='rounded shadow'
           />
           <img
-            src='/images/photo3.jpg'
-            alt='Event 3'
+            src='/images/khuado_lam.jpg'
+            alt='Zomi event 3'
             className='rounded shadow'
           />
         </div>
-       </section>  */}
+      </section>
     </div>
   );
 }
