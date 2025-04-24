@@ -3,6 +3,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import ParallaxClientWrapper from '@/components/ParallaxClientWrapper';
 import Footer from '@/components/Footer';
+import '@/lib/fontawesome';
 
 export const metadata: Metadata = {
   title: 'Zomi Inkuan Portland Oregon',
