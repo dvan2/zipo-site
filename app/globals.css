@@ -64,16 +64,11 @@ body {
 @theme {
   --color-zomi-red: #7b0d11; /* Traditional deep red */
   --color-zomi-green: #0d4618; /* Rich earthy green */
-  --color-zomi-yellow: #facc15; /* Vibrant gold-like yellow */
-  --color-zomi-black: #1f1f1f; /* Clean dark tone */
-  --color-zomi-white: #ffffff; /* Classic white */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 .nav-link {
