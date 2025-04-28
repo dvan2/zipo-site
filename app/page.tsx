@@ -1,5 +1,7 @@
 'use client';
+import { CalendarX2 } from 'lucide-react';
 import { Parallax } from 'react-scroll-parallax';
+import { events } from '@/data/events';
 
 export default function Home() {
   return (
@@ -36,29 +38,56 @@ export default function Home() {
       <section id='events' className='bg-[#fefae0] py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
           <h3 className='text-3xl font-bold text-gray-900 font-heading mb-10'>
-            Upcoming Event
+            Upcoming Events
           </h3>
-          <div className='bg-[#dfeee1] border border-gray-200 rounded-2xl shadow-md p-8 text-center'>
-            <h4 className='text-2xl font-semibold text-zomi-red mb-2'>
-              Zomi Nam Ni - KUM 76 CIN
-            </h4>
 
-            <p className='text-gray-700 mb-1'>
-              <strong>Date:</strong> Feb 17, 2024 | 1:00 PM - 5:00 PM
-            </p>
+          {events.length > 0 ? (
+            <div className='grid gap-8'>
+              {events.map((event, index) => (
+                <div
+                  key={index}
+                  className='bg-[#dfeee1] border border-gray-200 rounded-2xl shadow-md p-8 text-center'
+                >
+                  <h4 className='text-2xl font-semibold text-zomi-red mb-2'>
+                    {event.title}
+                  </h4>
 
-            <p className='text-gray-700 mb-4'>
-              <strong>Location:</strong> 12003 NE Shaver St, Portland, OR 97220{' '}
-              <br /> Parkrose High School
-            </p>
+                  <p className='text-gray-700 mb-1'>
+                    <strong>Date:</strong> {event.date}
+                  </p>
 
-            <a
-              href='#'
-              className='inline-block mt-4 text-zomi-green font-semibold hover:underline'
-            >
-              See All Events
-            </a>
-          </div>
+                  <p className='text-gray-700 mb-4'>
+                    <strong>Location:</strong> {event.location}
+                  </p>
+
+                  <a
+                    href={event.link}
+                    className='inline-block mt-4 text-zomi-green font-semibold hover:underline'
+                  >
+                    See Details
+                  </a>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className='bg-[#dfeee1] border border-gray-200 rounded-2xl shadow-md p-8 text-center flex flex-col items-center'>
+              <CalendarX2 className='w-16 h-16 text-zomi-red mb-4 float-up-fade' />
+              <h4 className='text-2xl font-semibold text-zomi-red mb-2'>
+                No events scheduled at the moment.
+              </h4>
+              <p className='text-gray-700 mb-4 max-w-md'>
+                Please check back soon or follow us on{' '}
+                <a
+                  href='https://www.facebook.com/ZomiInnkuanPortlandOregon'
+                  target='_blank'
+                  className='text-zomi-green font-semibold hover:underline'
+                >
+                  Facebook
+                </a>{' '}
+                for the latest updates!
+              </p>
+            </div>
+          )}
         </div>
       </section>
 
