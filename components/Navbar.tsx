@@ -11,7 +11,7 @@ const navItems = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
   { label: 'Activities', href: '/activities' },
-  { label: 'History', href: '/history' },
+  { label: 'Leadership', href: '/leadership' },
   { label: 'Contact Us', href: '/contact' },
 ];
 
