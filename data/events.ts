@@ -2,7 +2,7 @@
 
 export interface Event {
   title: string;
-  date: string;
+  date: string; // ISO format better
   location: string;
   link: string;
 }
@@ -10,9 +10,14 @@ export interface Event {
 export const events: Event[] = [
   {
     title: 'Zomi Nam Ni - KUM 76 CIN',
-    date: 'Feb 17, 2024 | 1:00 PM - 5:00 PM',
+    date: '2024-05-17T13:00:00', // Feb 17, 2024 at 1 PM
     location: '12003 NE Shaver St, Portland, OR 97220 (Parkrose High School)',
-    link: '#', // You can update this if you have a Facebook or flyer link
+    link: '#',
   },
-  // You can add more events like this easily later!
+  {
+    title: 'Zomi Harvest Festival',
+    date: '2025-04-15T12:00:00', // Oct 15, 2023 (past event)
+    location: 'Gresham Main Park, OR',
+    link: '#',
+  },
 ];

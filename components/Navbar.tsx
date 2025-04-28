@@ -10,6 +10,7 @@ const navItems = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
   { label: 'Leadership', href: '/leadership' },
+  { label: 'Events', href: '/events' },
   { label: 'Activities', href: '/activities' },
 ];
 

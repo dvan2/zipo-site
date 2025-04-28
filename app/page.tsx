@@ -2,8 +2,20 @@
 import { CalendarX2 } from 'lucide-react';
 import { Parallax } from 'react-scroll-parallax';
 import { events } from '@/data/events';
+import { isFuture } from 'date-fns'; // We can use tiny library, or JS Date
+import Link from 'next/link';
 
 export default function Home() {
+  const upcomingEvents = events.filter(
+    (event) => new Date(event.date) > new Date()
+  );
+
+  const galleryImages = [
+    { src: '/images/youth_khuado.jpg', alt: 'Zomi event 1' },
+    { src: '/images/khuado_lam.jpg', alt: 'Zomi event 2' },
+    { src: '/images/zomi_khuado_papi.jpg', alt: 'Zomi event 3' },
+  ];
+
   return (
     <div className='bg-background text-foreground font-sans'>
       <section
@@ -38,12 +50,12 @@ export default function Home() {
       <section id='events' className='bg-[#fefae0] py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
           <h3 className='text-3xl font-bold text-gray-900 font-heading mb-10'>
-            Upcoming Events
+            Upcoming Event
           </h3>
 
-          {events.length > 0 ? (
+          {upcomingEvents.length > 0 ? (
             <div className='grid gap-8'>
-              {events.map((event, index) => (
+              {upcomingEvents.slice(0, 2).map((event, index) => (
                 <div
                   key={index}
                   className='bg-[#dfeee1] border border-gray-200 rounded-2xl shadow-md p-8 text-center'
@@ -51,27 +63,25 @@ export default function Home() {
                   <h4 className='text-2xl font-semibold text-zomi-red mb-2'>
                     {event.title}
                   </h4>
-
                   <p className='text-gray-700 mb-1'>
-                    <strong>Date:</strong> {event.date}
+                    <strong>Date: </strong>
+                    {formatDate(event.date)}
                   </p>
-
                   <p className='text-gray-700 mb-4'>
                     <strong>Location:</strong> {event.location}
                   </p>
-
                   <a
                     href={event.link}
                     className='inline-block mt-4 text-zomi-green font-semibold hover:underline'
                   >
-                    See Details
+                    View Details
                   </a>
                 </div>
               ))}
             </div>
           ) : (
             <div className='bg-[#dfeee1] border border-gray-200 rounded-2xl shadow-md p-8 text-center flex flex-col items-center'>
-              <CalendarX2 className='w-16 h-16 text-zomi-red mb-4 float-up-fade' />
+              <CalendarX2 className='w-16 h-16 text-zomi-red mb-4' />
               <h4 className='text-2xl font-semibold text-zomi-red mb-2'>
                 No events scheduled at the moment.
               </h4>
@@ -88,32 +98,46 @@ export default function Home() {
               </p>
             </div>
           )}
+
+          <Link
+            href='/events'
+            className='inline-block mt-10 text-zomi-green font-semibold hover:underline'
+          >
+            See All Events
+          </Link>
         </div>
       </section>
 
       {/* Gallery section */}
-      <section id='gallery' className='bg-py-16 px-6 mb-16'>
+      <section id='gallery' className='bg-[#fefae0] py-16 px-6 mb-16'>
         <h3 className='text-2xl font-heading font-semibold text-center mb-8'>
           From Our Celebrations
         </h3>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto'>
-          <img
-            src='/images/group_star.jpg'
-            alt='Zomi event 1'
-            className='rounded shadow'
-          />
-          <img
-            src='/images/khuado_lam.jpg'
-            alt='Zomi event 2'
-            className='rounded shadow'
-          />
-          <img
-            src='/images/khuado_lam.jpg'
-            alt='Zomi event 3'
-            className='rounded shadow'
-          />
+
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto'>
+          {galleryImages.map((image, index) => (
+            <img
+              key={index}
+              src={image.src}
+              alt={image.alt}
+              className='w-full h-64 object-cover rounded-xl shadow-md transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg'
+            />
+          ))}
         </div>
       </section>
     </div>
   );
+}
+
+function formatDate(dateStr: string) {
+  const options: Intl.DateTimeFormatOptions = {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: true,
+  };
+
+  return new Date(dateStr).toLocaleDateString('en-US', options);
 }
