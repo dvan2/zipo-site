@@ -22,18 +22,20 @@ export default function Navbar() {
   return (
     <nav className='bg-background'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='flex justify-between items-center py-4'>
-          <Link href='/' className='flex'>
-            <Image
-              src='/images/ziporound.png'
-              alt='ZIPO logo'
-              width={48}
-              height={48}
-            />
-          </Link>
+        <div className='flex items-center justify-between h-32 py-8 relative'>
+          <div className='flex-shrink-0'>
+            <Link href='/' className='flex items-center'>
+              <Image
+                src='/images/ziporound.png'
+                alt='ZIPO logo'
+                width={48}
+                height={48}
+              />
+            </Link>
+          </div>
 
           {/* Desktop Menu */}
-          <div className='hidden md:flex space-x-8 text-base font-light text-gray-700'>
+          <div className='hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-16 whitespace-nowrap text-base font-light text-gray-700'>
             {navItems.map(({ label, href }) => (
               <Link
                 key={href}
