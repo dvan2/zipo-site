@@ -8,7 +8,7 @@ export default function ActivitiesPage() {
         <PageHeader title='Activities' />
         {/* Community Sports Section */}
         <section className='mb-16'>
-          <h2 className='text-2xl font-heading text-zomi-green-less mb-4'>
+          <h2 className='text-2xl font-heading text-zomi-green mb-4'>
             Zomi Sports Day
           </h2>
           <p className='text-base text-gray-700 mb-6 leading-relaxed'>
@@ -40,7 +40,7 @@ export default function ActivitiesPage() {
 
         {/* Cultural Celebrations */}
         <section className='mb-16'>
-          <h2 className='text-2xl font-heading text-zomi-green-less mb-4'>
+          <h2 className='text-2xl font-heading text-zomi-green mb-4'>
             Cultural Celebrations
           </h2>
 
@@ -75,7 +75,7 @@ export default function ActivitiesPage() {
 
         {/* National Fellowship */}
         <section className='mb-8'>
-          <h2 className='text-2xl font-heading text-zomi-red-less mb-4'>
+          <h2 className='text-2xl font-heading text-zomi-red mb-4'>
             National Fellowship – ZIUSA Tulsa
           </h2>
           <p className='text-base text-gray-700 leading-relaxed mb-4'>

@@ -14,7 +14,7 @@ export default function EventsPage() {
 
       {/* Upcoming Events */}
       <section className='mb-16'>
-        <h2 className='text-2xl font-bold text-zomi-green-less mb-8 text-center'>
+        <h2 className='text-2xl font-bold text-zomi-green mb-8 text-center'>
           Upcoming Events
         </h2>
         {upcomingEvents.length > 0 ? (

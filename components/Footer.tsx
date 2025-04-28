@@ -36,7 +36,7 @@ export default function Footer() {
               />
             }
             label='Facebook'
-            hoverColor='hover:bg-zomi-green-less hover:text-white'
+            hoverColor='hover:bg-zomi-green hover:text-white'
           />
           <SocialButton
             href='https://www.instagram.com/zomiinnkuanportland/'

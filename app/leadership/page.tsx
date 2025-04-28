@@ -109,7 +109,7 @@ export default function LeadershipPage() {
               </div>
             </div>
 
-            <h2 className='text-2xl font-heading font-semibold text-zomi-green-less mt-16 mb-10 text-center'>
+            <h2 className='text-2xl font-heading font-semibold text-zomi-green mt-16 mb-10 text-center'>
               Youth Department
             </h2>
             <div className='flex justify-center'>

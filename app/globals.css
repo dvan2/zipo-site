@@ -11,7 +11,7 @@
 
 @layer components {
   .nav-link {
-    @apply text-base font-normal text-gray-700 hover:text-zomi-green-less transition;
+    @apply text-base font-normal text-gray-700 hover:text-zomi-green transition;
   }
 
   .font-heading {
@@ -22,6 +22,10 @@
     @apply text-lg leading-relaxed;
     letter-spacing: 0.02em;
     line-height: 1.75;
+  }
+
+  .card-style {
+    @apply w-full mx-auto rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300 ease-in-out;
   }
 }
 
@@ -59,12 +63,10 @@ body {
 
 @theme {
   --color-zomi-red: #7b0d11; /* Traditional deep red */
-  --color-zomi-green: #2e8b57; /* Rich earthy green */
+  --color-zomi-green: #0d4618; /* Rich earthy green */
   --color-zomi-yellow: #facc15; /* Vibrant gold-like yellow */
   --color-zomi-black: #1f1f1f; /* Clean dark tone */
   --color-zomi-white: #ffffff; /* Classic white */
-  --color-zomi-green-less: #0d4618;
-  --color-zomi-red-less: #7b0d11;
 }
 
 @theme inline {
@@ -85,7 +87,7 @@ body {
   height: 2px;
   bottom: 0;
   left: 0;
-  background: var(--color-zomi-green-less);
+  background: var(--color-zomi-green);
   transition: width 0.3s ease;
 }
 

@@ -6,6 +6,7 @@ import { isFuture } from 'date-fns'; // We can use tiny library, or JS Date
 import Link from 'next/link';
 
 export default function Home() {
+  // Only get future dates
   const upcomingEvents = events.filter(
     (event) => new Date(event.date) > new Date()
   );
@@ -39,7 +40,7 @@ export default function Home() {
           <Parallax speed={-10}>
             <a
               href='#events'
-              className='bg-zomi-red-less text-white px-6 py-2 rounded font-semibold hover:bg-zomi-green-less transition'
+              className='bg-zomi-red text-white px-6 py-2 rounded font-semibold hover:bg-zomi-green transition'
             >
               Join the Celebration
             </a>
@@ -47,7 +48,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id='events' className='bg-[#fefae0] py-20 px-6'>
+      <section id='events' className='pt-20 pb-8 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
           <h3 className='text-3xl font-bold text-gray-900 font-heading mb-10'>
             Upcoming Event
@@ -109,7 +110,7 @@ export default function Home() {
       </section>
 
       {/* Gallery section */}
-      <section id='gallery' className='bg-[#fefae0] py-16 px-6 mb-16'>
+      <section id='gallery' className='py-16 px-6 mb-16'>
         <h3 className='text-2xl font-heading font-semibold text-center mb-8'>
           From Our Celebrations
         </h3>
@@ -120,7 +121,7 @@ export default function Home() {
               key={index}
               src={image.src}
               alt={image.alt}
-              className='w-full h-64 object-cover rounded-xl shadow-md transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg'
+              className='card-style h-65 object-cover'
             />
           ))}
         </div>

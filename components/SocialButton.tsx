@@ -4,7 +4,7 @@ interface SocialButtonProps {
   href: string;
   icon: ReactNode;
   label: string;
-  hoverColor: string; // Tailwind class string, e.g. 'hover:bg-zomi-green-less'
+  hoverColor: string;
 }
 
 export default function SocialButton({
@@ -18,7 +18,7 @@ export default function SocialButton({
       href={href}
       target='_blank'
       rel='noopener noreferrer'
-      className={`group flex items-center rounded-full h-[50px] w-[50px] hover:w-[150px] transition-all duration-300 text-zomi-red-less shadow overflow-hidden px-3 ${hoverColor}`}
+      className={`group flex items-center rounded-full h-[50px] w-[50px] hover:w-[150px] transition-all duration-300 text-zomi-red shadow overflow-hidden px-3 ${hoverColor}`}
     >
       {icon}
       <span className='ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium whitespace-nowrap'>

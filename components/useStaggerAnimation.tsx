@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 
-export function useStaggerAnimation(delay: number) {
+export function useStaggerAnimation() {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -19,5 +19,5 @@ export function useStaggerAnimation(delay: number) {
     return () => observer.disconnect();
   }, []);
 
-  return { ref, isVisible, delayClass: `delay-${delay}` };
+  return { ref, isVisible };
 }
