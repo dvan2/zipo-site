@@ -11,7 +11,6 @@ const navItems = [
   { label: 'About Us', href: '/about' },
   { label: 'Leadership', href: '/leadership' },
   { label: 'Activities', href: '/activities' },
-  { label: 'Contact Us', href: '/contact' },
 ];
 
 export default function Navbar() {
