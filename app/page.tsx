@@ -100,12 +100,12 @@ export default function Home() {
             </div>
           )}
 
-          <Link
+          {/* <Link
             href='/events'
             className='inline-block mt-10 text-zomi-green font-semibold hover:underline'
           >
             See All Events
-          </Link>
+          </Link> */}
         </div>
       </section>
 
