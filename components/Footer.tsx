@@ -5,8 +5,8 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className='w-full bg-zomi-red text-white py-12 border-t-4 border-zomi-green mx-auto'>
-      <div className='max-w-7xl mx-auto px-6 flex flex-col md:flex-row md:justify-between gap-8'>
+    <footer className='w-full bg-zomi-red-less text-white py-12 border-t-4 border-zomi-green mx-auto'>
+      <div className='max-w-7xl mx-auto px-6 flex flex-col md:flex-row md:justify-between md:gap-8 gap-12'>
         {/* Left info */}
         <div className='flex flex-col items-center md:items-start text-center md:text-left'>
           <Image
@@ -23,24 +23,38 @@ export default function Footer() {
         </div>
 
         {/* Middle Section */}
-        <div className='flex flex-col text-center md:text-left gap-2'>
-          <h4 className='font-semibold text-lg mb-2'>Quick Links</h4>
-          <a href='/about' className='hover:underline text-sm'>
+        <div className='flex flex-col items-center text-center md:text-left gap-2'>
+          <h4 className='font-semibold text-lg mb-2 mt-6 md:mt-0'>
+            Quick Links
+          </h4>
+          <a
+            href='/about'
+            className='nav-link text-white hover:text-zomi-yellow'
+          >
             About Us
           </a>
-          <a href='/activities' className='hover:underline text-sm'>
+          <a
+            href='/activities'
+            className='nav-link text-white hover:text-zomi-yellow'
+          >
             Activities
           </a>
-          <a href='/leadership' className='hover:underline text-sm'>
+          <a
+            href='/leadership'
+            className='nav-link text-white hover:text-zomi-yellow'
+          >
             Leadership
           </a>
-          <a href='/contact' className='hover:underline text-sm'>
+          <a
+            href='/contact'
+            className='nav-link text-white hover:text-zomi-yellow'
+          >
             Contact Us
           </a>
         </div>
 
-        <div className='flex flex-col justify-center items-center md:items-end md:text-right min-w-[160px]'>
-          <h4 className='font-semibold text-lg mb-4'>Follow Us</h4>
+        <div className='flex flex-col justify-center items-center gap-3 md:text-right min-w-[160px]'>
+          <h4 className='font-semibold text-lg mb-2'>Follow Us</h4>
           <SocialButton
             href='https://www.facebook.com/ZomiInnkuanPortlandOregon'
             icon={

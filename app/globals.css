@@ -63,6 +63,8 @@ body {
 
 @theme {
   --color-zomi-red: #7b0d11; /* Traditional deep red */
+  --color-zomi-red-less: #991b1b;
+  --color--red-muted: #a94448;
   --color-zomi-green: #0d4618; /* Rich earthy green */
 }
 
