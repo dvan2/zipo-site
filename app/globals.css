@@ -71,10 +71,6 @@ body {
   --color-foreground: var(--foreground);
 }
 
-.nav-link {
-  @apply relative transition;
-}
-
 .nav-link::after {
   content: '';
   position: absolute;
@@ -82,7 +78,7 @@ body {
   height: 2px;
   bottom: 0;
   left: 0;
-  background: var(--color-zomi-green);
+  background: var(--color-zomi-red);
   transition: width 0.3s ease;
 }
 
