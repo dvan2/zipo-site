@@ -16,7 +16,7 @@ export default function About() {
       </p>
 
       {/* Mission Block */}
-      <div className='border-l-4 border-zomi-green-less p-6 rounded-lg shadow-sm fade-in mb-10'>
+      <div className='border-l-4 border-zomi-green p-6 rounded-lg shadow-sm fade-in mb-10'>
         <h3 className='text-xl font-heading font-semibold text-zomi-red mb-2'>
           Our Mission
         </h3>

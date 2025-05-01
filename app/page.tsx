@@ -1,7 +1,22 @@
 'use client';
+import { CalendarX2 } from 'lucide-react';
 import { Parallax } from 'react-scroll-parallax';
+import { events } from '@/data/events';
+import { isFuture } from 'date-fns'; // We can use tiny library, or JS Date
+import Link from 'next/link';
 
 export default function Home() {
+  // Only get future dates
+  const upcomingEvents = events.filter(
+    (event) => new Date(event.date) > new Date()
+  );
+
+  const galleryImages = [
+    { src: '/images/youth_khuado.jpg', alt: 'Zomi event 1' },
+    { src: '/images/khuado_lam.jpg', alt: 'Zomi event 2' },
+    { src: '/images/zomi_khuado_papi.jpg', alt: 'Zomi event 3' },
+  ];
+
   return (
     <div className='bg-background text-foreground font-sans'>
       <section
@@ -25,7 +40,7 @@ export default function Home() {
           <Parallax speed={-10}>
             <a
               href='#events'
-              className='bg-zomi-red-less text-white px-6 py-2 rounded font-semibold hover:bg-zomi-green-less transition'
+              className='bg-zomi-red text-white px-6 py-2 rounded font-semibold hover:bg-zomi-green transition'
             >
               Join the Celebration
             </a>
@@ -33,58 +48,97 @@ export default function Home() {
         </div>
       </section>
 
-      <section id='events' className='bg-[#fefae0] py-20 px-6'>
+      <section id='events' className='pt-20 pb-8 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
           <h3 className='text-3xl font-bold text-gray-900 font-heading mb-10'>
             Upcoming Event
           </h3>
-          <div className='bg-[#dfeee1] border border-gray-200 rounded-2xl shadow-md p-8 text-center'>
-            <h4 className='text-2xl font-semibold text-zomi-red mb-2'>
-              Zomi Nam Ni - KUM 76 CIN
-            </h4>
 
-            <p className='text-gray-700 mb-1'>
-              <strong>Date:</strong> Feb 17, 2024 | 1:00 PM - 5:00 PM
-            </p>
+          {upcomingEvents.length > 0 ? (
+            <div className='grid gap-8'>
+              {upcomingEvents.slice(0, 2).map((event, index) => (
+                <div
+                  key={index}
+                  className='bg-[#dfeee1] border border-gray-200 rounded-2xl shadow-md p-8 text-center'
+                >
+                  <h4 className='text-2xl font-semibold text-zomi-red mb-2'>
+                    {event.title}
+                  </h4>
+                  <p className='text-gray-700 mb-1'>
+                    <strong>Date: </strong>
+                    {formatDate(event.date)}
+                  </p>
+                  <p className='text-gray-700 mb-4'>
+                    <strong>Location:</strong> {event.location}
+                  </p>
+                  <a
+                    href={event.link}
+                    className='inline-block mt-4 text-zomi-green font-semibold hover:underline'
+                  >
+                    View Details
+                  </a>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className='bg-[#dfeee1] border border-gray-200 rounded-2xl shadow-md p-8 text-center flex flex-col items-center'>
+              <CalendarX2 className='w-16 h-16 text-zomi-red mb-4' />
+              <h4 className='text-2xl font-semibold text-zomi-red mb-2'>
+                No events scheduled at the moment.
+              </h4>
+              <p className='text-gray-700 mb-4 max-w-md'>
+                Please check back soon or follow us on{' '}
+                <a
+                  href='https://www.facebook.com/ZomiInnkuanPortlandOregon'
+                  target='_blank'
+                  className='text-zomi-green font-semibold hover:underline'
+                >
+                  Facebook
+                </a>{' '}
+                for the latest updates!
+              </p>
+            </div>
+          )}
 
-            <p className='text-gray-700 mb-4'>
-              <strong>Location:</strong> 12003 NE Shaver St, Portland, OR 97220{' '}
-              <br /> Parkrose High School
-            </p>
-
-            <a
-              href='#'
-              className='inline-block mt-4 text-zomi-green font-semibold hover:underline'
-            >
-              See All Events
-            </a>
-          </div>
+          {/* <Link
+            href='/events'
+            className='inline-block mt-10 text-zomi-green font-semibold hover:underline'
+          >
+            See All Events
+          </Link> */}
         </div>
       </section>
 
       {/* Gallery section */}
-      <section id='gallery' className='bg-py-16 px-6 mb-16'>
+      <section id='gallery' className='py-16 px-6 mb-16'>
         <h3 className='text-2xl font-heading font-semibold text-center mb-8'>
           From Our Celebrations
         </h3>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto'>
-          <img
-            src='/images/group_star.jpg'
-            alt='Zomi event 1'
-            className='rounded shadow'
-          />
-          <img
-            src='/images/khuado_lam.jpg'
-            alt='Zomi event 2'
-            className='rounded shadow'
-          />
-          <img
-            src='/images/khuado_lam.jpg'
-            alt='Zomi event 3'
-            className='rounded shadow'
-          />
+
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto'>
+          {galleryImages.map((image, index) => (
+            <img
+              key={index}
+              src={image.src}
+              alt={image.alt}
+              className='card-style h-65 object-cover'
+            />
+          ))}
         </div>
       </section>
     </div>
   );
+}
+
+function formatDate(dateStr: string) {
+  const options: Intl.DateTimeFormatOptions = {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: true,
+  };
+
+  return new Date(dateStr).toLocaleDateString('en-US', options);
 }
