@@ -19,7 +19,7 @@ export default function Footer() {
           <p className='text-lg font-bold mb-2'>Zomi Innkuan Portland Oregon</p>
           <p className='text-sm'>2181 SE 171ST Ave, Portland, OR 97233</p>
           <p className='text-sm'>Phone: +1 (503) 875-4790</p>
-          <p className='text-sm'>Email: info@zomiportland.org</p>
+          <p className='text-sm'>Email: zomiinnkuanportlandoregon@gmail.com</p>
         </div>
 
         {/* Middle Section */}

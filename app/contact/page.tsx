@@ -25,7 +25,7 @@ export default function ContactPage() {
         </div>
         <div className='flex items-center'>
           <Mail className='text-zomi-red mr-3' />
-          <p className='text-gray-800'>info@zomiportland.org</p>
+          <p className='text-gray-800'>zomiinnkuanportlandoregon@gmail.com</p>
         </div>
       </div>
       {/* Future: Add contact form here */}
