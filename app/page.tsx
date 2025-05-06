@@ -12,9 +12,9 @@ export default function Home() {
   );
 
   const galleryImages = [
-    { src: '/images/youth_khuado.jpg', alt: 'Zomi event 1' },
-    { src: '/images/khuado_lam.jpg', alt: 'Zomi event 2' },
-    { src: '/images/zomi_khuado_papi.jpg', alt: 'Zomi event 3' },
+    { src: '/images/khuado_lam.jpg', alt: 'Khuado Lam' },
+    { src: '/images/new_year_park.jpg', alt: 'Zomi event 3' },
+    { src: '/images/youth_khuado.jpg', alt: 'Khuado Youth' },
   ];
 
   return (
