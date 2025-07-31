@@ -6,9 +6,8 @@ import { isFuture } from 'date-fns'; // We can use tiny library, or JS Date
 import Link from 'next/link';
 
 export default function Home() {
-  // Only get future dates
   const upcomingEvents = events.filter(
-    (event) => new Date(event.date) > new Date()
+    (event) => new Date(event.endDate) > new Date()
   );
 
   const galleryImages = [
@@ -61,13 +60,14 @@ export default function Home() {
                   key={index}
                   className='bg-[#dfeee1] border border-gray-200 rounded-2xl shadow-md p-8 text-center'
                 >
-                  <h4 className='text-2xl font-semibold text-zomi-red mb-2'>
+                  <h4 className='text-2xl font-semibold text-zomi-red mb-4'>
                     {event.title}
                   </h4>
-                  <p className='text-gray-700 mb-1'>
-                    <strong>Date: </strong>
-                    {formatDate(event.date)}
+                  <p className='text-gray-700 mb-2'>
+                    📅 <strong>Date:</strong> {formatDate(event.startDate)} –{' '}
+                    {formatDate(event.endDate)}
                   </p>
+
                   <p className='text-gray-700 mb-4'>
                     <strong>Location:</strong> {event.location}
                   </p>
