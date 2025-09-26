@@ -54,20 +54,52 @@ export default function LeadershipPage() {
     <Wrapper>
       <PageHeader title='Leadership & Vision' />
       {/* President’s Message */}
+      {/* President’s Message - Bilingual */}
       <section className='mt-12 mb-16'>
-        <div className='max-w-3xl mx-auto text-center'>
-          <h2 className='text-2xl font-heading font-semibold text-zomi-red mb-4'>
+        <div className='max-w-4xl mx-auto'>
+          <h2 className='text-2xl font-heading font-semibold text-zomi-red text-center mb-8'>
             Message from Our President
           </h2>
-          <p className='italic text-gray-700 mb-4'>
-            "Together, we celebrate our heritage, embrace unity, and build a
-            legacy for generations to come. Our mission is not just about
-            preserving culture — it's about empowering our people to thrive and
-            lead with dignity in every step of their journey."
-          </p>
-          <p className='text-base text-gray-800 font-semibold'>
-            — En Khan Khai, President
-          </p>
+
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+            {/* English Version */}
+            <div className='text-gray-800 leading-relaxed'>
+              <p className='mb-4'>
+                Welcome! Whether you’re part of the Zomi community, a supportive
+                friend, or simply curious to learn more — we’re so glad you’re
+                here.
+              </p>
+              <p className='mb-4'>
+                Since 2004, ZIPO has been about culture, connection, and
+                community. We’re proud of our journey and the heritage we carry.
+                Our community is a big, warm family — and there’s always room
+                for you in it.
+              </p>
+              <p className='mb-4'>
+                Together, we continue to build a future rooted in unity,
+                tradition, and hope. We can’t wait for you to be part of it.
+              </p>
+              <p className='font-semibold mt-4'>— Pu En Khan Khai, President</p>
+            </div>
+
+            {/* Zomi Version */}
+            <div className='text-gray-800 leading-relaxed'>
+              <p className='mb-4'>
+                Dam kim tek maw? Zomi Innkuan Portland Oregon (ZIPO) bup tang
+                in, kong muak uh hi.
+              </p>
+              <p className='mb-4'>
+                ZIPO kipawlna pen kum 2004 pan in kipan khia aa, “Portland sung
+                ah Zomi te a ding manphatna, ii ngeina, ii pau leh ii lai te
+                khantohna ding leh lamsang na ding in nasep na a tuamtuam kinei
+                a pawi tuamtuam ki bawl hi. Tua dan ah no te nong ki helna ding
+                in Kong zawn nuam hi.”
+              </p>
+              <p className='font-semibold mt-4'>
+                — Pu En Khan Khai, ZIPO Innkuan
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -75,12 +107,12 @@ export default function LeadershipPage() {
       <section className='mb-16'>
         <div className='max-w-4xl mx-auto px-4'>
           <img
-            src='/images/leaders/group_photo.jpg'
+            src='/images/leaders/leaders_photo.jpg'
             alt='ZIPO Leadership Group Photo'
             className='rounded-xl shadow-md w-full object-cover mb-4'
           />
           <p className='text-sm text-center text-gray-500'>
-            Our 2024 leadership team — united in service and culture.
+            Our Zipo Board members at 2025, Zomi National Day
           </p>
         </div>
       </section>

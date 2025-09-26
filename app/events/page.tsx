@@ -5,8 +5,10 @@ import Wrapper from '@/components/Wrapper';
 export default function EventsPage() {
   const now = new Date();
 
-  const upcomingEvents = events.filter((event) => new Date(event.date) > now);
-  const pastEvents = events.filter((event) => new Date(event.date) <= now);
+  const upcomingEvents = events.filter(
+    (event) => new Date(event.endDate) > new Date()
+  );
+  // const pastEvents = events.filter((event) => new Date(event.date) <= now);
 
   return (
     <Wrapper>
@@ -29,7 +31,7 @@ export default function EventsPage() {
       </section>
 
       {/* Past Events */}
-      <section>
+      {/* <section>
         <h2 className='text-2xl font-bold text-zomi-red mb-8 text-center'>
           Past Events
         </h2>
@@ -42,20 +44,21 @@ export default function EventsPage() {
         ) : (
           <p className='text-center text-gray-500'>No past events yet.</p>
         )}
-      </section>
+      </section> */}
     </Wrapper>
   );
 }
 
-/* 👇 helper components inside same file */
 function EventCard({
   title,
-  date,
+  startDate,
+  endDate,
   location,
   link,
 }: {
   title: string;
-  date: string;
+  startDate: string;
+  endDate: string;
   location: string;
   link: string;
 }) {
@@ -63,7 +66,7 @@ function EventCard({
     <div className='bg-[#dfeee1] border border-gray-200 rounded-2xl shadow-md p-8 text-center'>
       <h4 className='text-2xl font-semibold text-zomi-red mb-2'>{title}</h4>
       <p className='text-gray-700 mb-1'>
-        <strong>Date:</strong> {formatDate(date)}
+        <strong>Dates:</strong> {formatDate(startDate)} – {formatDate(endDate)}
       </p>
       <p className='text-gray-700 mb-4'>
         <strong>Location:</strong> {location}
