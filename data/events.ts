@@ -6,6 +6,8 @@ export interface Event {
   endDate: string;
   location: string;
   link: string;
+  image?: string;
+  template?: string;
 }
 
 export const events: Event[] = [
@@ -27,5 +29,14 @@ export const events: Event[] = [
     endDate: '2025-08-02T17:00:00',
     location: 'Parklane Park, SE 155th Ave & SE Main St, Portland, OR 97233',
     link: '/events/sports-day',
+  },
+  {
+    title: 'Khuado Pawi 2025',
+    startDate: '2025-10-11T16:00:00',
+    endDate: '2025-10-11T21:00:00',
+    location: 'MHCC Theatre, 26000 SE Stark St, Gresham, OR 97030',
+    link: '/events/khuado-2025',
+    image: '/images/events/khuado_25.jpg',
+    template: 'festival',
   },
 ];
